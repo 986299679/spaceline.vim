@@ -57,11 +57,29 @@ let g:spaceline_line_symbol = 0
 let g:spaceline_colorscheme = 'space'
 ```
 
+- `g:spaceline_custom_vim_status` custom vim status display.default is
+
+```vim
+ {"n": "🅝 ","V":"🅥 ","v":"🅥 ","\<C-v>": "🅥 ","i":"🅘 ","R":"🅡 ","s":"🅢 ","t":"🅣 ","c":"🅒 ","!":"SE"}
+```
+
+- `g:spaceline_custom_buffer_number` custom buffer number display value is list
+
 - `g:spaceline_lsp_executive` set your lsp plugin. default is `coc`,other value
-  is `nvim_lsp`
+  `nvim_lsp`, `ale`
 
 - `g:spaceline_diagnostic_errorsign` set the error sign.
 - `g:spaceline_diagnostic_warnsign` set the warn sign.
+- `g:spaceline_diagnostic_oksign` set the ok sign.
+
+- `g:spaceline_git_branch_icon` set the git branch icon default is empty
+- `g:spaceline_custom_diff_icon` custom diff icon. default is
+
+```vim
+ ['','','']
+```
+
+- `g:spaceline_function_icon` set the function icon
 
 - `g:spaceline_scroll_bar_chars` set the scroll bar chars. Some alternatives:
 

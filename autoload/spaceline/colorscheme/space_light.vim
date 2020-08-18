@@ -1,21 +1,21 @@
 " =============================================================================
 " Filename: spaceline.vim
-" Author: taigacute
+" Author: GenmZy_
 " URL: https://github.com/taigacute/spaceline.vim
 " License: MIT License
 " =============================================================================
-function! spaceline#colorscheme#space#space()
+function! spaceline#colorscheme#space_light#space_light()
   let s:slc={}
-  let s:slc.yellow = ['fabd2f', 214]
-  let s:slc.navy = ['242B38', 237]
-  let s:slc.lightgray= ['c0c0c0', 188]
-  let s:slc.purple = ['5d4d7a', 261]
-  let s:slc.orange  = ['FF8800', 208]
+  let s:slc.yellow = ['b7b7ff', 214]
+  let s:slc.navy = ['f3f3f3', 237]
+  let s:slc.lightgray= ['655370', 188]
+  let s:slc.purple = ['e2e0ea', 261]
+  let s:slc.orange  = ['ff8800', 208]
   let s:slc.red = ['ec5f67', 203]
-  let s:slc.blue = ['0087d7', 32]
-  let s:slc.lightblue = ['6272a4', 225]
-  let s:slc.teal = ['008080', 6]
-  let s:slc.green = ['afd700', 148]
+  let s:slc.blue = ['36a3d9', 32]
+  let s:slc.lightblue = ['a8a8bf', 225]
+  let s:slc.teal = ['3e4b59', 6]
+  let s:slc.green = ['67b11d', 148]
   let s:slc.gray = ['3c3836', 237]
   let s:slc.darknavy=[]
 

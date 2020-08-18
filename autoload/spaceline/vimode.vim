@@ -6,22 +6,6 @@
 " =============================================================================
 
 function! spaceline#vimode#vim_mode()
-  let l:mode=mode()
-  if l:mode==#"n"
-    return " "
-  elseif l:mode==?"v"
-    return " "
-  elseif l:mode==#"i"
-    return " "
-  elseif l:mode==#"R"
-    return " "
-  elseif l:mode==?"s"
-    return " "
-  elseif l:mode==#"t"
-    return "ﭨ "
-  elseif l:mode==#"c"
-    return " "
-  elseif l:mode==#"!"
-    return "SE"
-  endif
+  let status= exists('g:spaceline_custom_vim_status') ? get(g:,'spaceline_custom_vim_status') : {"n": "🅝 ","V":"🅥 ","v":"🅥 ","\<C-v>": "🅥 ","i":"🅘 ","R":"🅡 ","s":"🅢 ","t":"🅣 ","c":"🅒 ","!":"SE"}
+  return status[mode()]
 endfunction

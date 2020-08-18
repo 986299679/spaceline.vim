@@ -46,14 +46,14 @@ function! s:ActiveStatusLine()
         let s:statusline.="%{spaceline#file#file_size()}"
         let s:statusline.="\ "
     endif
-    if !empty(get(g:,'coc_git_status',''))
+    if !empty(spaceline#vcs#git_branch())
         let s:statusline.="%#GitLeft#"
         let s:statusline.=g:sep.gitleft
         let s:statusline.="%#GitInfo#"
         let s:statusline.="\ "
         let s:statusline.="%{spaceline#vcs#git_branch()}"
         let s:statusline.="\ "
-        if !empty(get(b:,'coc_git_status',''))
+        if !empty(get(b:,'coc_git_status'))
           let diff_data = get(b:,'coc_git_status', '')
           if matchend(diff_data, '+') > 0
             let s:statusline.="%#GitAdd#"
@@ -71,11 +71,11 @@ function! s:ActiveStatusLine()
         let s:statusline.="%#GitRight#"
         let s:statusline.=g:sep.gitright
     endif
-    if !empty(expand('%:t')) && empty(get(g:,'coc_git_status','')) && &filetype != 'defx' && &filetype != 'coc-explorer' && &filetype != 'debui'
+    if !empty(expand('%:t')) && empty(spaceline#vcs#git_branch()) && &filetype != 'defx' && &filetype != 'coc-explorer' && &filetype != 'debui'
         let s:statusline.="%#emptySeperate1#"
         let s:statusline.=g:sep.emptySeperate1
     endif
-    if empty(expand('%:t')) && empty(get(g:,'coc_git_status',''))
+    if empty(expand('%:t')) && empty(spaceline#vcs#git_branch())
         let s:statusline.="%#emptySeperate1#"
         let s:statusline.=g:sep.emptySeperate1
     endif
@@ -83,6 +83,10 @@ function! s:ActiveStatusLine()
     let s:statusline.="\ "
     let s:statusline.="%{spaceline#status#coc_status()}"
     let s:statusline.="%="
+    if squeeze_width >40
+      let s:statusline.="%#VistaNearest#"
+      let s:statusline.="%{spaceline#vista#vista_nearest()}"
+    endif
     let s:statusline.="%#LineInfoLeft#"
     let s:statusline.=g:sep.lineinfoleft
     if squeeze_width > 40
