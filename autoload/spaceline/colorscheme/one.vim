@@ -9,7 +9,7 @@ function! spaceline#colorscheme#one#one()
   let s:slc.white = ['abb2bf', 255]
   let s:slc.yellow = ['fabd2f', 214]
   let s:slc.navy = ['242B38', 237]
-  let s:slc.purple = ['C678DD', 251]
+  let s:slc.purple = ['86589E', 251]
   let s:slc.orange  = ['FF8800', 208]
   let s:slc.red = ['ec5f67', 203]
   let s:slc.blue = ['61AFEF', 32]
