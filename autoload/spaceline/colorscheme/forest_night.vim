@@ -16,7 +16,7 @@ function! spaceline#colorscheme#forest_night#forest_night()
   let s:slc.lightblue = ['a8a8bf', 225]
   let s:slc.teal = ['576268', 6]
   let s:slc.green = ['d8caac', 148]
-  let s:slc.gray = ['#3c3836', 237]
+  let s:slc.gray = ['2d9574', 237]
   let s:slc.darknavy=[]
 
   call spaceline#colors#match_background_color(s:slc.darknavy)
@@ -91,7 +91,7 @@ function! spaceline#colorscheme#forest_night#forest_night()
   call spaceline#colors#spaceline_hl('CocError',s:slc,  'red',  'navy')
   call spaceline#colors#spaceline_hl('CocWarn',s:slc,  'blue',  'navy')
   call spaceline#colors#spaceline_hl('GitInfo',s:slc,  'lightgray',  'purple')
-  call spaceline#colors#spaceline_hl('GitAdd',s:slc,  'green',  'purple')
+  call spaceline#colors#spaceline_hl('GitAdd',s:slc,  'gray',  'purple')
   call spaceline#colors#spaceline_hl('GitRemove',s:slc,  'red',  'purple')
   call spaceline#colors#spaceline_hl('GitModified',s:slc,  'orange',  'purple')
   call spaceline#colors#spaceline_hl('CocBar',s:slc,  'teal',  'darknavy')
